@@ -64,7 +64,7 @@ function getMaxGaokaoForProvinceId($province_id) {
 if (isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     switch ($action) {
-        case 'getProvinceListFromCountryId' : 
+        case 'getProvinceListFromCountryId' :
             $country_id = $_POST['country_id'];
             getProvinceListFromCountryId($country_id);
             break;
@@ -74,15 +74,3 @@ if (isset($_POST['action']) && !empty($_POST['action'])) {
             break;
     }
 }
-function getMaxGaokao($province){
-    $connection = getConnectionToDb();
-    $query = "SELECT province_gaokao.max_gaokao_score from province_gaokao INNER JOIN province 
-             ON province_gaokao.province_id=province.province_id WHERE province_name='$province'";
-    $max_score = mysqli_query($connection, $query);
-    $maxArray = array();    
-    while($row = mysqli_fetch_assoc($max_score)){
-        $maxArray[] = $row["max_gaokao_score"];
-    }
-    return $maxArray;
-}
-

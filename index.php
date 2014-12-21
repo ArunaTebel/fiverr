@@ -40,6 +40,7 @@ $provinceList = getProvinceList();
                     <h3 class="form-heading">
                         Student Feedback Form
                     </h3>
+                    <div class="alert alert-danger" role="alert"><strong>ERROR OCCURRED: </strong>&emsp; You have done bullshit!</div>
                     <div class="form-left">
                         <!-- Select Basic -->
                         <div class="form-group">
@@ -84,6 +85,7 @@ $provinceList = getProvinceList();
                                 <div class="input-group">
                                     <input disabled="true" id="gaokao_score" name="gaokao_score" class="form-control" placeholder="0" type="text">
                                     <span id="gaokao_max" class="input-group-addon"></span>
+                                    <input type="text" hidden="true" id="gaokao_max_hidden" name="gaokao_max">
                                 </div>
 
                             </div>
@@ -111,10 +113,7 @@ $provinceList = getProvinceList();
                                             - Select Location - 
                                             <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#">Sydney</a></li>
-                                            <li><a href="#">Melbourne</a></li>
-                                            <li><a href="#">Darwin</a></li>
+                                        <ul id="aus-location-list" class="dropdown-menu pull-right">
                                         </ul>
                                     </div>
                                 </div>
