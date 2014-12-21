@@ -214,7 +214,8 @@ $provinceList = getProvinceList();
                         </div>
 
                         <!--Submit Button-->
-                        <a class="btn btn-primary btn-lg submit-btn" href="#" role="button">SUBMIT!</a>
+                        <input type="submit" value="Submit!" class="btn btn-primary btn-lg submit-btn"/>
+                        
                     </div>
                 </div>
             </fieldset>
