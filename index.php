@@ -34,7 +34,7 @@ $provinceList = getProvinceList();
     </head>
     <body>
 
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="recommendation.php" method="post">
             <fieldset>
                 <div class="form-container">
                     <h3 class="form-heading">
