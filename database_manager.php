@@ -53,12 +53,24 @@ function getProvinceListFromCountryId($countryId) {
     echo json_encode($provinceArray);
 }
 
+function getMaxGaokaoForProvinceId($province_id) {
+    $connection = getConnectionToDb();
+    $query = "SELECT max_goakao_score FROM province_gaokao WHERE province_id = " . $province_id;
+    $max_gaokao = mysqli_query($connection, $query);
+    $maxGaokaoScore = mysqli_fetch_assoc($max_gaokao)['max_goakao_score'];
+    echo $maxGaokaoScore;
+}
+
 if (isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     switch ($action) {
         case 'getProvinceListFromCountryId' : 
             $country_id = $_POST['country_id'];
             getProvinceListFromCountryId($country_id);
+            break;
+        case 'getMaxGaokaoForProvinceId':
+            $province_id = $_POST['province_id'];
+            getMaxGaokaoForProvinceId($province_id);
             break;
     }
 }
