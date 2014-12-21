@@ -14,7 +14,7 @@ $(document).ready(function () {
                 $(data).each(function ()
                 {
                     var option = $('<option />');
-                    option.attr('value', this.province_id).text(this.province);
+                    option.attr('value', this.province_id).text(this.province_name);
                     $('#province_select').append(option);
                 });
             },

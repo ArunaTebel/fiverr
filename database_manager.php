@@ -44,7 +44,7 @@ function getProvinceList() {
 
 function getProvinceListFromCountryId($countryId) {
     $connection = getConnectionToDb();
-    $query = "SELECT province, province_id FROM province WHERE country_id = " . $countryId;
+    $query = "SELECT province_name, province_id FROM province WHERE country_id = " . $countryId;
     $provinces = mysqli_query($connection, $query);
     $provinceArray = array();
     while ($row = mysqli_fetch_assoc($provinces)) {
@@ -55,9 +55,9 @@ function getProvinceListFromCountryId($countryId) {
 
 function getMaxGaokaoForProvinceId($province_id) {
     $connection = getConnectionToDb();
-    $query = "SELECT max_goakao_score FROM province_gaokao WHERE province_id = " . $province_id;
+    $query = "SELECT max_gaokao_score FROM province_gaokao WHERE province_id = " . $province_id;
     $max_gaokao = mysqli_query($connection, $query);
-    $maxGaokaoScore = mysqli_fetch_assoc($max_gaokao)['max_goakao_score'];
+    $maxGaokaoScore = mysqli_fetch_assoc($max_gaokao)['max_gaokao_score'];
     echo $maxGaokaoScore;
 }
 
