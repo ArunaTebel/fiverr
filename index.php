@@ -72,9 +72,7 @@ $provinceList = getProvinceList();
                             <label class="col-md-4 control-label" for="province_select">Province</label>
                             <div class="col-md-6">
                                 <select id="province_select" name="province_select" class="form-control">
-                                    <!--                                    <option value="western">Western</option>
-                                                                        <option value="southern">Southern</option>
-                                                                        <option value="eastern">Eastern</option>-->
+
                                 </select>
                             </div>
                         </div>
@@ -82,10 +80,10 @@ $provinceList = getProvinceList();
                         <!-- Appended Input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="gaokao_score">GAOKAO Score</label>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="input-group">
-                                    <input id="gaokao_score" name="gaokao_score" class="form-control" placeholder="0" type="text">
-                                    <span class="input-group-addon">/ 750</span>
+                                    <input disabled="true" id="gaokao_score" name="gaokao_score" class="form-control" placeholder="0" type="text">
+                                    <span id="gaokao_max" class="input-group-addon"></span>
                                 </div>
 
                             </div>
@@ -94,9 +92,11 @@ $provinceList = getProvinceList();
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="budget_input">Estimated budget per year</label>  
-                            <div class="col-md-4">
-                                <input id="budget_input" name="budget_input" type="text" placeholder="0" class="form-control input-md">
-                                <span class="help-block">* in Australian Dollars</span>  
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input id="budget_input" name="budget_input" type="text" placeholder="0" class="form-control input-md">
+                                    <span id="gaokao_max" class="input-group-addon">$ AUD</span>
+                                </div>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@ $provinceList = getProvinceList();
                         <!-- Multiple Radios (inline) -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="worl_rank_radios">Select preferred university rank</label>
-                            <div class="col-md-4"> 
+                            <div class="col-md-6"> 
                                 <label class="radio-inline" for="worl_rank_radios-0">
                                     <input type="radio" name="worl_rank_radios" id="worl_rank_radios-0" value="1" checked="checked">
                                     Top 10
@@ -215,7 +215,7 @@ $provinceList = getProvinceList();
 
                         <!--Submit Button-->
                         <input type="submit" value="Submit!" class="btn btn-primary btn-lg submit-btn"/>
-                        
+
                     </div>
                 </div>
             </fieldset>
