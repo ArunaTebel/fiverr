@@ -34,21 +34,20 @@ $provinceList = getProvinceList();
     </head>
     <body>
 
-        <div class="form-container">
-            <h3 class="form-heading">
-                Student Feedback Form
-            </h3>
-            <div class="form-left">
-                <form class="form-horizontal">
-                    <fieldset>
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="form-container">
+                    <h3 class="form-heading">
+                        Student Feedback Form
+                    </h3>
+                    <div class="form-left">
                         <!-- Select Basic -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="country_select">Country</label>
                             <div class="col-md-6">
                                 <select id="country_select" name="country_select" class="form-control">
-                                    <?php
-                                    foreach ($countryList as $country) {?>
-                                    <option value="<?php echo strtolower($country['country_id']); ?>"><?php echo $country['country_name']; ?></option>
+                                    <?php foreach ($countryList as $country) { ?>
+                                        <option value="<?php echo strtolower($country['country_id']); ?>"><?php echo $country['country_name']; ?></option>
                                     <?php }
                                     ?>
                                 </select>
@@ -60,9 +59,8 @@ $provinceList = getProvinceList();
                             <label class="col-md-4 control-label" for="field_select">Field/Faculty</label>
                             <div class="col-md-6">
                                 <select id="field_select" name="field_select" class="form-control">
-                                    <?php
-                                    foreach ($fieldList as $field) {?>
-                                    <option value="<?php echo strtolower($field['field_id']); ?>"><?php echo $field['field_name']; ?></option>
+                                    <?php foreach ($fieldList as $field) { ?>
+                                        <option value="<?php echo strtolower($field['field_id']); ?>"><?php echo $field['field_name']; ?></option>
                                     <?php }
                                     ?>
                                 </select>
@@ -74,9 +72,9 @@ $provinceList = getProvinceList();
                             <label class="col-md-4 control-label" for="province_select">Province</label>
                             <div class="col-md-6">
                                 <select id="province_select" name="province_select" class="form-control">
-<!--                                    <option value="western">Western</option>
-                                    <option value="southern">Southern</option>
-                                    <option value="eastern">Eastern</option>-->
+                                    <!--                                    <option value="western">Western</option>
+                                                                        <option value="southern">Southern</option>
+                                                                        <option value="eastern">Eastern</option>-->
                                 </select>
                             </div>
                         </div>
@@ -141,12 +139,12 @@ $provinceList = getProvinceList();
                                 </label>
                             </div>
                         </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="form-right">
-                <form class="form-horizontal">
-                    <fieldset>
+                        <!--</fieldset>-->
+                        <!--</form>-->
+                    </div>
+                    <div class="form-right">
+                        <!--                <form class="form-horizontal">
+                                            <fieldset>-->
                         <!-- Prepended text-->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="ielts_reading">IELTS Scores</label>
@@ -217,11 +215,10 @@ $provinceList = getProvinceList();
 
                         <!--Submit Button-->
                         <a class="btn btn-primary btn-lg submit-btn" href="#" role="button">SUBMIT!</a>
-
-                    </fieldset>                    
-                </form>
-            </div>
-        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
 
         <!--Results Table-->
         <div class="table-container">

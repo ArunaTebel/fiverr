@@ -29,6 +29,12 @@ label{
     float: left;
 }
 
+.form-right{
+    float: right;
+    margin-top: -370px;
+    margin-left: 500px;
+}
+
 .form-heading{
     text-align: center;
     color: #151515;
